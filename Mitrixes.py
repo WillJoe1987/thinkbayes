@@ -31,7 +31,7 @@ class point():
         self.buttom = self.function(down, left, right,up ) * self.buttom
 
     def function(self, up, down, left, right):
-        return up.get_right()+ down.get_right() + left.get_right() + right.get_right()
+        return up.get_right()/(up.get_right()+ down.get_right() + left.get_right() + right.get_right())
 
     def print(self):
         print('x:'+str(self.x) + ';y:'+str(self.y) + ';right:'+str(self.get_right()))
@@ -91,7 +91,7 @@ class Mitrix():
                 point.update()
 
 
-m = Mitrix(10,10)
+m = Mitrix(3,3)
 print(m)
 m.print_points()
 m.update_all()
